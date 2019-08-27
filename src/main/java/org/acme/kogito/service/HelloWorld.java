@@ -7,6 +7,6 @@ import org.acme.kogito.model.Hello;
 public class HelloWorld {
 
 	public Hello hello() {
-		return null;
+		return new Hello();
 	}
 }
