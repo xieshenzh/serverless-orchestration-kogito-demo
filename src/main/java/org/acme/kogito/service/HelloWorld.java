@@ -6,7 +6,9 @@ import org.acme.kogito.model.Hello;
 @ApplicationScoped
 public class HelloWorld {
 
-	public Hello hello() {
-		return new Hello();
+	public Hello hello(String hello) {
+		Hello h = new Hello();
+		h.setPayload("hello");
+		return h;
 	}
 }
