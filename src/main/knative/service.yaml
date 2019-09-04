@@ -10,11 +10,5 @@ spec:
       containers:
       - image: image-registry.openshift-image-registry.svc:5000/serverless-orchestration/kogito
         env:
-        - name: POD_NAME
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.name
         - name: POD_NAMESPACE
-          valueFrom:
-            fieldRef:
-              fieldPath: metadata.namespace
+          value: "serverless-orchestration"

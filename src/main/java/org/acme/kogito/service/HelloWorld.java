@@ -21,7 +21,8 @@ public class HelloWorld {
     private static final String NAMESPACE = System.getenv("POD_NAMESPACE");
 
     public Hello hello(String h)  {
-        String url = SERVICE + "." + NAMESPACE + "." + URL + "/" + PATH;
+        String url = "http://" + SERVICE + "." + NAMESPACE + "." + URL + "/" + PATH;
+        LOGGER.info("URL: " + url);
 
         try {
             URI apiUri = new URI(url);

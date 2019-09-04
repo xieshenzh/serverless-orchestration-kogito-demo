@@ -21,7 +21,8 @@ public class SaveResult {
     private static final String NAMESPACE = System.getenv("POD_NAMESPACE");
 
     public Result saveResult(Result result) {
-        String url = SERVICE + "." + NAMESPACE + "." + URL + "/" + PATH;
+        String url = "http://" + SERVICE + "." + NAMESPACE + "." + URL + "/" + PATH;
+        LOGGER.info("URL: " + url);
 
         try {
             URI apiUri = new URI(url);
