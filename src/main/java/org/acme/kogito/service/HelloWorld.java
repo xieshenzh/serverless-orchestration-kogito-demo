@@ -17,11 +17,11 @@ public class HelloWorld {
 
     private static final String SERVICE = "helloworld";
     private static final String URL = "svc.cluster.local";
-    private static final String PATH = "hello";
+//    private static final String PATH = "hello";
     private static final String NAMESPACE = System.getenv("POD_NAMESPACE");
 
     public Hello hello(String h)  {
-        String url = "http://" + SERVICE + "." + NAMESPACE + "." + URL + "/" + PATH;
+        String url = "http://" + SERVICE + "." + NAMESPACE + "." + URL;
         LOGGER.info("URL: " + url);
 
         try {

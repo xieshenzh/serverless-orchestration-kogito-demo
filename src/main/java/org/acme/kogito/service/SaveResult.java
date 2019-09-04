@@ -17,11 +17,11 @@ public class SaveResult {
 
     private static final String SERVICE = "saveresults";
     private static final String URL = "svc.cluster.local";
-    private static final String PATH = "save";
+//    private static final String PATH = "save";
     private static final String NAMESPACE = System.getenv("POD_NAMESPACE");
 
     public Result saveResult(Result result) {
-        String url = "http://" + SERVICE + "." + NAMESPACE + "." + URL + "/" + PATH;
+        String url = "http://" + SERVICE + "." + NAMESPACE + "." + URL;
         LOGGER.info("URL: " + url);
 
         try {
