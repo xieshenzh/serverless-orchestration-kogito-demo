@@ -2,13 +2,13 @@ package org.acme.kogito.model;
 
 public class Hello {
 
-	private String payload;
+	private String output;
 
-	public String getPayload() {
-		return payload;
+	public String getOutput() {
+		return output;
 	}
 
-	public void setPayload(String payload) {
-		this.payload = payload;
+	public void setOutput(String output) {
+		this.output = output;
 	}
 }

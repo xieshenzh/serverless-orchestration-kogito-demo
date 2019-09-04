@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: kogito-git-source
+spec:
+  type: git
+  params:
+  - name: url
+    value: https://github.com/xiezhang7/serverless-orchestration-kogito-demo
+  - name: revision
+    value: master
+
+---
+
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineResource
+metadata:
+  name: kogito-image
+spec:
+  type: image
+  params:
+  - name: url
+    value: "image-registry.openshift-image-registry.svc:5000/serverless-orchestration/kogito"

@@ -2,13 +2,13 @@ package org.acme.kogito.model;
 
 public class Result {
 
-	private String result;
+	private String input;
 
-	public String getResult() {
-		return result;
+	public String getInput() {
+		return input;
 	}
 
-	public void setResult(String result) {
-		this.result = result;
+	public void setInput(String input) {
+		this.input = input;
 	}
 }

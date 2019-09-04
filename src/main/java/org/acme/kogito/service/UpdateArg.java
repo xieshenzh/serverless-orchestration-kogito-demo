@@ -8,8 +8,8 @@ import org.acme.kogito.model.Result;
 public class UpdateArg {
 
 	public Result updateArg(Hello hello) {
-		Result r = new Result();
-		r.setResult(hello.getPayload());
-		return r;
+		Result result = new Result();
+		result.setInput(hello.getOutput());
+		return result;
 	}
 }
